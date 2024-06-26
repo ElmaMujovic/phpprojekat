@@ -8,11 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
-    protected $fillable=[
-        'question','a','b','c','d','points','answer',
+
+    protected $fillable = [
+        'question', 'a', 'b', 'points', 'answer',
     ];
+
     public function tests()
     {
-        return $this->hasMany(Tests::class,'id','idTest');
+        return $this->hasMany(Tests::class, 'id', 'idTest');
     }
 }

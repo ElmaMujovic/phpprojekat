@@ -12,6 +12,7 @@ use App\Http\Controllers\Front\StudentController;
 use App\Http\Controllers\Front\TeacherController;
 use App\Http\Controllers\Front\UserController;  
 use App\Http\Controllers\Front\MyProfileController; 
+use App\Http\Controllers\Front\CommentController;  
 
 Route::get('/', 'App\Http\Controllers\Front\HomePageController@index')->name('front.homepage');
 Route::get('/courses', 'App\Http\Controllers\Front\CoursePageController@courses');
@@ -101,3 +102,4 @@ Route::get('/profile', function () {
 
 Route::post('/show-correct-questions', [TeacherController::class, 'showCorrectQuestions'])->name('showCorrectQuestions');
 Route::get('/polaznici', [TeacherController::class, 'polaznici'])->name('polaznici');
+Route::post('/course/{course}/comment', [CommentController::class, 'store'])->name('comment.store');

@@ -82,28 +82,26 @@ class TeacherController extends Controller
       $datatest->save();
       return redirect('/test')->with('success','Formirali ste novi test');
   }
-  public function addQA(Request $request ){
-    $this->validate($request,[
-      'nameq'=>'required',
-      'valueA'=>'required',
-      'valueB'=>'required',
-      'valueC'=>'required',
-      'valueD'=>'required',
-      'ans'=>'required',
-  ]);
-
-  $dataq=new Question();
-  $dataq->question=$request->nameq;
-  $dataq->a=$request->valueA;
-  $dataq->b=$request->valueB;
-  $dataq->c=$request->valueC;
-  $dataq->d=$request->valueD;
-  $dataq->answer=$request->ans;
-  $dataq->idTest=$request->testid;
-  $dataq->save();
-
-  return redirect('/test')->with('success','Dodali ste pitanje');
+  public function addQA(Request $request)
+  {
+      $this->validate($request, [
+          'nameq' => 'required',
+          'answer' => 'required',
+          'testid' => 'required',
+      ]);
+  
+      $dataq = new Question();
+      $dataq->question = $request->nameq;
+      $dataq->a = $request->answer === 'da' ? 'da' : '';
+      $dataq->b = $request->answer === 'ne' ? 'ne' : '';
+      $dataq->answer = $request->answer;
+      $dataq->idTest = $request->testid;
+      $dataq->save();
+  
+      return redirect('/test')->with('success', 'Dodali ste pitanje');
   }
+  
+
   public function showstt()
   {
     $datacs=Course::all();

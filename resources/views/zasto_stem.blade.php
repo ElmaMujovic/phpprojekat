@@ -9,12 +9,11 @@
     <title>Document</title>
 
     <style>
-        /* Dodatak u stajestem.css */
 
         body {
-            font-family: 'Arial', sans-serif; /* Korišćenje Arial fonta */
-            font-size: 18px; /* Povećanje veličine fonta */
-            line-height: 1.6; /* Povećanje razmaka između redova */
+            font-family: 'Arial', sans-serif; 
+            font-size: 18px;
+            line-height: 1.6; 
         }
 
         .naslov-container {
