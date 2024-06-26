@@ -1,0 +1,328 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+#header {
+	justify-content: space-between;
+	align-items: center;
+	background: #7facf0;
+	color: #fff;
+	position:fixed;
+	padding: 10px;
+}
+.u-name {
+	font-size: 20px;
+	padding-left: 17px;
+}
+.u-name b {
+	color: #127b8e;
+}
+.header i {
+	font-size: 30px;
+	cursor: pointer;
+	color: #fff;
+}
+.header i:hover {
+	color: #127b8e;
+}
+.user-p {
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 25px;
+}
+.user-p img {
+	width: 100px;
+	border-radius: 50%;
+}
+.user-p h4 {
+	color: #ccc;
+	padding: 5px 0;
+
+}
+.side-bar {
+	width: 150px;
+	position: fixed;
+	background:rgba(65, 103, 159, 0.854);
+	transition: 500ms width;
+	height: 100%;
+	padding-top: 90px;
+}
+.body {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.section-1 {
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+	padding-left: 100px;
+	margin-left: 80px;
+}
+.section-1 h1{
+	font-size: 25px;
+	justify-content: center;
+	align-items: center;
+}
+.section-2 {
+	width: 80%;
+	height: 100%;
+	padding-left: 100px;
+	margin-left: 80px;
+}
+.section-2 h1{
+	font-size: 25px;
+	justify-content: center;
+	align-items: center;
+}
+.section-1 p {
+	color: #127b8e;
+	font-size: 20px;
+	background: #fff;
+	padding: 7px;
+	border-radius: 5px;
+}
+.side-bar ul {
+	margin-top: 20px;
+	list-style: none;
+}
+.side-bar ul li {
+	font-size: 16px;
+	padding: 15px 0px;
+	padding-left: 20px;
+	transition: 500ms background;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.side-bar ul li:hover {
+	background: #d723238d;
+}
+.side-bar ul li a {
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+.side-bar ul li a i {
+	display: inline-block;
+	padding-right: 10px;
+	font-size: 23px;
+}
+#navbtn {
+	position: relative;
+	color: #7facf0;
+	margin-left: 50px;
+	font-size: 30px;
+	transition: 500ms color;
+}
+.footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background-color:#7facf0;
+	margin-bottom:0;
+}
+.notification .badge {
+	position: absolute;
+	left: 35px;
+	border-radius: 50%;
+	background-color:#7facf0;
+	color: white;
+  }
+#checkbox {
+	display: none;
+}
+#checkbox:checked ~ .body .side-bar {
+	width: 80px;
+}
+#checkbox:checked ~ .body .side-bar .user-p{
+	visibility: visible;
+}
+#checkbox:checked ~ .body .side-bar a span{
+	display: none;
+}
+.pure-css-bootstrap-modal {
+	position: absolute; /* Don't take any space. */
+}
+.pure-css-bootstrap-modal label.close {
+	/* Reset */
+	padding: 0;
+	margin: 0;
+  }
+
+#modal-switch {
+	display: none;
+  }
+
+  /* MODAL */
+.modal {
+	display: block;
+  }
+#modal-switch:not(:checked) ~ .modal {
+	max-width: 0;
+  }
+#modal-switch:checked ~ .fade,
+#modal-switch:checked ~ .modal .fade
+  {
+	opacity: 1;
+  }
+
+  /* BACKDROP */
+.modal-backdrop {
+	margin: 0;
+  }
+#modal-switch:not(:checked) ~ .modal .modal-backdrop
+  {
+	display: none;
+  }
+#modal-switch:checked ~ .modal .modal-backdrop
+  {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+  }
+
+  /* DIALOG */
+#modal-switch ~ .modal .modal-dialog {
+	transition: transform .3s ease-out;
+	transform: translate(0, -50%);
+  }
+#modal-switch:checked ~ .modal .modal-dialog {
+	transform: translate(0, 10%);
+	z-index: 1050;
+  }
+table {
+	border-collapse: collapse;
+	width: 90%;
+	border-spacing: 0;
+	border: 2px solid #0a0606;
+}
+th, td {
+	text-align: left;
+	padding: 8px;
+  }
+tr:nth-child(even){
+	background-color: #f2f2f2}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+		justify-content: center;
+	}
+
+	tr { border: 1px solid #ccc;
+	}
+
+	td {
+		border: none;
+		border-bottom: 2px solid #7facf0;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		border-right:2px solid #7facf0;
+		background-color: #7facf0;
+		color: #0a0606;
+		align-items: center;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
+
+	td:nth-of-type(1):before { content: "Naziv Testa"; }
+    td:nth-of-type(2):before { content: "Kurs"; }
+	td:nth-of-type(3):before { content: "Tip Testa"; }
+    td:nth-of-type(4):before { content: "Datum Testa"; }
+    td:nth-of-type(5):before { content: "Test Pitanja"; }
+	td:nth-of-type(6):before { content: "Rezultati Testa"; }
+
+	#tabela td:nth-of-type(1):before { content: "Ime"; }
+	#tabela td:nth-of-type(2):before { content: "Prezime"; }
+	#tabela td:nth-of-type(3):before { content: "Broj tačnih"; }
+	#tabela td:nth-of-type(4):before { content: "Broj netačnih"; }
+	#tabela td:nth-of-type(5):before { content: "Broj pitanja"; }
+	#tabela td:nth-of-type(6):before { content: "Broj poena"; }
+
+	#tabela1 td:nth-of-type(1):before { content: "Ime"; }
+	#tabela1 td:nth-of-type(2):before { content: "Prezime"; }
+	#tabela1 td:nth-of-type(3):before { content: "Email"; }
+}
+@media only screen and (min-width: 768px) and (max-width: 1424px)  {
+	table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+	thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		tr { border: 1px solid #ccc;
+		}
+
+		td {
+			border: none;
+			border-bottom: 2px solid #7facf0;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+			border-right:2px solid #7facf0;
+			background-color: #7facf0;
+			color: #0a0606;
+			align-items: center;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		}
+		td:nth-of-type(1):before { content: "Naziv Testa"; }
+		td:nth-of-type(2):before { content: "Kurs"; }
+		td:nth-of-type(3):before { content: "Tip Testa"; }
+		td:nth-of-type(4):before { content: "Datum Testa"; }
+		td:nth-of-type(5):before { content: "Test Pitanja"; }
+		td:nth-of-type(6):before { content: "Rezultati Testa"; }
+
+		#tabela td:nth-of-type(1):before { content: "Ime"; }
+		#tabela td:nth-of-type(2):before { content: "Prezime"; }
+		#tabela td:nth-of-type(3):before { content: "Broj tacnih"; }
+		#tabela td:nth-of-type(4):before { content: "Broj netacnih"; }
+		#tabela td:nth-of-type(5):before { content: "Broj pitanja"; }
+		#tabela td:nth-of-type(6):before { content: "Broj poena"; }
+
+		#tabela1 td:nth-of-type(1):before { content: "Ime"; }
+	    #tabela1 td:nth-of-type(2):before { content: "Prezime"; }
+	    #tabela1 td:nth-of-type(3):before { content: "Email"; }
+}
+
+#cardnews{
+	color:#7facf0;
+	border-radius:10px;
+	border:2px solid #0a0606;
+    background-color:#6888fa81;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin-top: 30px;
+	justify-content: center;
+}
+

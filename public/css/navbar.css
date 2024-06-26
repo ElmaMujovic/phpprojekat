@@ -1,0 +1,51 @@
+/* navbar.css */
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0; /* Unutrašnji prostor navbara (izmenjen) */
+    background-color: #d9b593bb; /* Bez boje pozadine navbara */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Senka ispod navbara */
+    margin: 0; /* Uklanja marginu oko navbara */
+    width: 100%; /* Puni širinu ekrana */
+}
+
+.navbar-brand {
+    font-family: 'Arial', sans-serif; /* Izbor fonta za brand/logo */
+    font-weight: bold;
+    font-size: 24px; /* Veličina fonta za brand/logo */
+    text-decoration: none;
+    color: #333; /* Boja teksta brand/logo-a */
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 15px; /* Razmak između stavki u meniju */
+}
+
+.nav-links li:last-child {
+    margin-right: 0; /* Uklanja razmak za poslednju stavku */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a89c9c; /* Boja teksta linkova */
+    font-weight: bold;
+    padding: 10px 15px; /* Unutrašnji prostor oko teksta linkova */
+    border-radius: 5px; /* Zaobljeni ivičnjaci */
+    transition: background-color 0.3s ease; /* Efekat tranzicije boje pozadine */
+}
+
+.nav-links a:hover {
+    background-color: #645f5f; /* Boja pozadine na hover stanju */
+}

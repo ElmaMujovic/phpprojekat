@@ -1,0 +1,167 @@
+.diagonal-div {
+    width: 100%;
+    height: 400px; /* Visina diva */
+    position: relative;
+    overflow: hidden;
+    margin-top: -400px; /* Primer pozicioniranja diva na 100px od vrha */
+}
+body{
+    background-color: #f39c12;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Dodato svojstvo */
+
+
+}
+
+
+
+.pocetna {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    height: 600px;
+    /* z-index: 1; Postavljamo z-index da bude ispred pseudo-elementa */
+}
+
+.diagonal-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Boja koja pokriva donji deo dijagonalnog prelaza */
+    transform-origin: bottom right;
+    transform: skewY(30deg); /* Nagib diva */
+    z-index: -1;
+}
+.pocetnadiv {
+    background-color: #f39c12;
+    margin-left: 20px;
+    margin-top: 10px; /* Dodajte margine na vrhu kako biste spustili tekst */
+    height: 50px;
+    width: 200px;
+    border-radius:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif; /* Drugi font */
+    color: white; /* Boja teksta */
+}
+.pocetnadiv1{
+    background-color: #d5bdbd;
+    margin-left: 180px;
+    margin-top: -45px; /* Dodajte margine na vrhu kako biste spustili tekst */
+    height: 40px;
+    width: 200px;
+    border-radius:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: Arial, sans-serif; /* Drugi font */
+    color: white; /* Boja teksta */
+    /* margin-top: 10px; */
+}
+.poseban{
+ color: blue;
+ margin-right: 5px;
+ font-size: 15px;
+}
+a {
+    text-decoration: none; /* Uklanja podvlačenje ispod linkova */
+}
+/* pocetna.css */
+
+.tekst {
+    margin: 60px; /* Prostor sa leve i desne strane teksta */
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center; /* Poravnavanje teksta na centar */
+
+}
+
+
+/* pocetna.css */
+
+.ikonice-container {
+    display: flex;
+    justify-content: space-between; /* Rasporedi ikonice ravnomerno po širini */
+    align-items: flex-start; /* Poravnaj ikonice i tekst gornjim delom */
+    margin: 0 70px; /* Dodaj prostor sa leve i desne strane containeru */
+    margin-top: 20px; /* Prostor između teksta i ikonica */
+    padding: 20px; /* Dodaj unutrašnji prostor containeru */
+    border-radius: 10px; /* Zaobljeni ivičnjaci containera */
+    text-align: justify; /* Ravnomerno rasporedi tekst po širini */
+
+}
+
+.ikonica {
+    flex-basis: 30%; /* Postavi širinu ikonice na 30% širine kontejnera */
+    text-align: center; /* Centriraj tekst unutar ikonice */
+    transition: transform 0.3s ease; /* Dodaj efekat tranzicije za povećanje */
+
+}
+
+.fa {
+    font-size: 120px; /* Povećaj veličinu ikonice */
+    margin-bottom: 20px; /* Povećaj prostor između ikonice i naslova */
+}
+
+/* Stilovi za naslove i opise ispod ikonica */
+h3, p {
+    margin: 10px 0; /* Dodaj prostor između naslova/opisa i drugih elemenata */
+}
+
+.pocetna-opis {
+    margin-top: 10px; /* Prostor između ikonica i opisa */
+    font-size: 16px; /* Postavi manju veličinu teksta */
+    line-height: 1.5; /* Postavi visinu linije za bolje čitljivost */
+}
+.ikon{
+    font-size: 50px;
+}
+
+.ikonica:hover {
+    transform: scale(1.1); /* Povećaj veličinu containera na hover */
+}
+/* Stilizacija naslov-diva */
+.naslov-div {
+    text-align: center; /* Centriranje teksta */
+    margin: 20px auto; /* Postavljamo margin za automatsko centriranje */
+    padding: 15px; /* Unutrašnji prostor */
+    background-color: #3498db; /* Plava boja pozadine */
+    border-radius: 10px; /* Zaobljeni ivičnjaci */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tranzicija boje pozadine i senke */
+    max-width: 500px; /* Maksimalna širina diva */
+    height: 130px;
+    box-shadow: 0px 8px 8px rgba(209, 137, 137, 0.1); /* Dodaj senku */
+}
+
+/* Promena boje pozadine na hover */
+.naslov-div:hover {
+    background-color: #2980b9; /* Tamnija nijansa plave */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Povećaj senku na hover */
+}
+
+/* Stilizacija linkova */
+.naslov-div a {
+    text-decoration: none; /* Uklanjanje podvučenosti linkova */
+    color: #fff; /* Bela boja teksta */
+    transition: color 0.3s ease; /* Tranzicija boje teksta */
+}
+
+/* Promena boje teksta na hover */
+.naslov-div a:hover {
+    color: #f39c12; /* Narandžasta boja */
+}
+
+.last-div {
+    margin-top: 20px; /* Dodatni razmak iznad Pogledaj video linkova */
+    display: inline-block; /* Postavljanje kao blok elementa da bi mogli da koristimo margin-top */
+}

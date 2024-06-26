@@ -1,0 +1,24 @@
+Neke od DDL naredbi navedene su u nastavku:
+
+STVORITI : Koristi se za izradu tablice.
+
+CREATE TABLE table_name column_name1 data_type(size), column_name2 data_type(size), column_name3 data_type(size),
+DOB: Tablica ALTER koristi se za izmjenu postojećeg objekta tablice u bazi podataka.
+
+ALTER TABLE table_name ADD column_name datatype
+ILI
+
+ALTER TABLE table_name DROP COLUMN column_name
+b) DML (jezik za manipulaciju podacima): Te se izjave koriste za manipulaciju podacima u zapisima. DML izrazi koji se često koriste su INSERT, UPDATE i DELETE.
+
+Izraz SELECT koristi se kao djelomični DML izraz koji se koristi za odabir svih ili relevantnih zapisa u tablici.
+
+c) DCL (jezik za kontrolu podataka): Ovi se izrazi koriste za postavljanje privilegija kao što su GRANT i REVOKE dozvola pristupa bazi podataka određenom korisniku .
+
+P # 4) Kako koristimo izraz DISTINCT? Koja je njegova upotreba?
+
+Odgovor: Izraz DISTINCT koristi se s izrazom SELECT. Ako zapis sadrži dvostruke vrijednosti, tada se izraz DISTINCT koristi za odabir različitih vrijednosti među duplikatima zapisa.
+
+Sintaksa:
+
+SELECT DISTINCT column_name(s) FROM table_name;
