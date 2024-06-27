@@ -12,4 +12,9 @@ class Course extends Model
     protected $fillable=[
         'course','infomation','image','state','imePredavaca','idUser',
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

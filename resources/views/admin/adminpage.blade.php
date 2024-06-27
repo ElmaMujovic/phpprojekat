@@ -1,11 +1,11 @@
 @extends('front.layouts.layoutadmin')
 @section('content')
 <div class="section-1" style="margin: 5px; text-align: center;">
-<h1></i> Registrovani Korisnici:</h1>
+<h1 style="margin-left:-140px;"></i> Registrovani Korisnici:</h1>
 
 
     <table class="my-table" >
-        <thead style="background-color:#8fbcf0">
+        <thead style="background-color: #ff5c33">
         <tr>
           <th>ID</th>
           <th>Ime</th>
