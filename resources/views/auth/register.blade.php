@@ -97,10 +97,10 @@
 
                         <div>
                             <p class="mt-1">Prijavi se kao: </p>
-                            <input type="radio" id="teacher" name="tip" value="teacher">
-                            <label for="teacher">Predavač</label>
-                            <input type="radio" id="student" name="tip" value="student">
-                            <label for="student">Polaznik</label>
+                            <input type="radio" id="vaspitac" name="tip" value="vaspitac">
+                            <label for="vaspitac">Vaspitac</label>
+                            <input type="radio" id="roditelj" name="tip" value="roditelj">
+                            <label for="roditelj">Roditelj</label>
                             {{-- <input type="radio" id="admin" name="tip" value="admin">
                             <label for="admin">Admin</label> --}}
                         </div>

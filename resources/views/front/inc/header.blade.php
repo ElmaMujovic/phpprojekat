@@ -178,9 +178,10 @@ input[type=checkbox]:checked ~ .menu {
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/">Početna</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/courses">Kursevi</a>
-                                </li>
+                                
+                    <li class="nav-item">
+                        <a class="nav-link" href="/nase-srecno-mesto">Nase srecno mesto</a>
+                    </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/login">Prijavi se</a>
                                 </li>
@@ -197,7 +198,7 @@ input[type=checkbox]:checked ~ .menu {
 
     <nav class="navbar">
         <!-- LOGO -->
-        <div class="logo" style="color: black">Fizix</div>
+        <div class="logo" style="color: black">Maslačak</div>
 
         <!-- NAVIGATION MENU -->
         <ul class="nav-links">
@@ -215,8 +216,9 @@ input[type=checkbox]:checked ~ .menu {
                         <a class="nav-link" href="/">Početna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/courses">Kursevi</a>
+                        <a class="nav-link" href="/nase-srecno-mesto">Nase srecno mesto</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Prijavi se</a>
                     </li>

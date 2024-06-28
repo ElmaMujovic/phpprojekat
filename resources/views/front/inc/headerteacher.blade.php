@@ -174,6 +174,12 @@ input[type=checkbox]:checked ~ .menu {
 
             <div class="menu" >
 			<ul>
+      <li class="nav-item">
+					<a href="/nasevaspitac"  class="nav-link">
+
+						<span>Pocetna</span>
+					</a>
+				</li>
 				<li class="nav-item">
 					<a href="/teacherpage"  class="nav-link">
 

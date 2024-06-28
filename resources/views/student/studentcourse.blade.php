@@ -9,7 +9,7 @@
             @if ($course->state == 'otvoren')
             <div class="col-sm-6 col-lg-6">
                 <div class="single_special_cource">
-                    <img src="/images/{{$course->image}}" class="special_img" alt="">
+                    <img src="/images/{{$course->image}}" class="special_img"  alt="">
                     <div class="special_cource_text">
                         <h4 style="color: black">{{$course->state}}</h4>
                         <a><h3 style="color:black">{{$course->course}}</a>

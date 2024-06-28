@@ -103,3 +103,19 @@ Route::get('/profile', function () {
 Route::post('/show-correct-questions', [TeacherController::class, 'showCorrectQuestions'])->name('showCorrectQuestions');
 Route::get('/polaznici', [TeacherController::class, 'polaznici'])->name('polaznici');
 Route::post('/course/{course}/comment', [CommentController::class, 'store'])->name('comment.store');
+
+Route::get('/nase-srecno-mesto', function () {
+    return view('nase-srecno-mesto');
+})->name('nase-srecno-mesto');
+
+Route::get('/naseroditelj', function () {
+    return view('naseroditelj');
+})->name('naseroditelj');
+
+Route::get('/nasevaspitac', function () {
+    return view('nasevaspitac');
+})->name('nasevaspitac');
+
+Route::get('/zaroditelje', function () {
+    return view('zaroditelje');
+})->name('zaroditelje');

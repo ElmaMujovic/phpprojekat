@@ -79,11 +79,11 @@ class RegisterController extends Controller
         $user->jmbg=$request->jmbg;
         $user->tip=$request->tip;
 
-        if($request->tip=='student')
+        if($request->tip=='roditelj')
         {
             $user->zahtev='načekanju';
         }
-        elseif($request->tip=='teacher')
+        elseif($request->tip=='vaspitac')
         {
             $user->zahtev='načekanju';
         }

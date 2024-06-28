@@ -173,6 +173,7 @@ input[type=checkbox]:checked ~ .menu {
 
             <div class="menu" >
 			<ul>
+      
 				<li class="nav-item">
 					<a href="/studentpage" class="nav-link">
 

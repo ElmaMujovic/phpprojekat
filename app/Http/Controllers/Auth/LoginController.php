@@ -47,7 +47,7 @@ class LoginController extends Controller
                  $request->session()->put('loginId',$user->id);
                  $request->session()->put('name',$user->firstname);
                   return redirect('adminpage');
-             }elseif($user->tip=='teacher'){
+             }elseif($user->tip=='vaspitac'){
                  if($user->zahtev=='načekanju'){
                      return back()->with('fail','Vaš zahtev za registraciju još nije prihvaćen!');
                  }elseif($user->zahtev=='odbijen'){
