@@ -1,23 +1,64 @@
 @extends('front.layouts.layoutadmin')
 @section('content')
+
+<style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Visina za centriranje po vertikali */
+    }
+    .custom-btn {
+      background-color: #ff5c33;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+      margin-left:190px;
+    }
+    .custom-btn:hover {
+      background-color: #e04c2f;
+      transform: scale(1.05);
+    }
+    .custom-btn:active {
+      background-color: #c0432a;
+    }
+  </style>
+
 <div class="section-2">
 <div  class="blog_part section_padding">
     <div class="content-wrapper" >
         <h2 class="col-md-16 text-center">Novosti skole</h2>
         <div class="button-wrapper">
-          <button class="btn_1" onclick="myFunction()">Dodaj novu vest!</button>
+          <button  style="
+      background-color: #ff5c33; /* Boja pozadine dugmeta */
+      color: white; /* Boja teksta dugmeta */
+      padding: 10px 20px; /* Unutrašnje margine */
+      border: none; /* Uklanja okvir */
+      border-radius: 5px; /* Zaobljeni uglovi */
+      cursor: pointer; /* Promena kursora pri hoveru */
+      font-size: 16px; /* Veličina fonta */
+      font-weight: bold; /* Boldovan tekst */
+      transition: background-color 0.3s, transform 0.3s; /* Glatka tranzicija za hover efekte */
+    "
+      onclick="myFunction()">Dodaj novu vest!</button>
         </div>
+        
       </div>
 
             <div  class="row">
               <div class="col-md-6">
 
-                   {{-- <button class="btn_1" onclick="myFunction()">Dodaj novu vest!</button> --}}
+                   {{-- <button class="btn_1"   onclick="myFunction()">Dodaj novu vest!</button> --}}
                      <div>
                   <br>
                   <div class="col-md-6">
                   @if ($message=Session::get('success'))
-                    <p class="alert alert-danger" style="background-color:  rgb(101, 179, 213); ">{{$message}}</p>
+                    <p class="alert alert-danger" style="background-color:  rgb(255, 179, 213); ">{{$message}}</p>
                   @endif
                   </div>
                   @if ($errors->any())
@@ -37,21 +78,21 @@
             <div class="row" style="justify-content: center">
     <div class="col-md-6" hidden id="adnews">
         <div id="cardnews" class="card">
-            <div class="card-body">
+            <div class="card-body" style="background-color: #85adad;" >
                 <form method="POST" action="{{ route('store')}}" enctype="multipart/form-data">
                     @csrf
                     <div id="basicInfo">
-                        <label class="card-title" for="nname">Naslov Novosti:</label>
-                        <input type="text" id="nname" name="nname" placeholder="Aktuelna vest" class="form-control" required>
+                    <label style="color: black; font-weight: bold; font-size: 18px; margin-bottom: 10px; display: block; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;" class="card-title" for="nname">Naslov novosti:</label>
+                    <input type="text" id="nname" name="nname" placeholder="Aktuelna vest" class="form-control" required>
                         <br>
-                        <label for="detail">Objašnjenje Novosti:</label>
+                        <label style="color: black; font-weight: bold; font-size: 18px; margin-bottom: 10px; display: block; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;" for="detail">Objašnjenje Novosti:</label>
                         <textarea id="detail" name="detail" placeholder="Komentari" class="form-control" style="height: 150px;" required></textarea>
                         <br>
-                        <label for="image">Izaberite sliku:</label>
+                        <label style="color: black; font-weight: bold; font-size: 18px; margin-bottom: 10px; display: block; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;" for="image">Izaberite sliku:</label>
                         <input type="file" id="image" name="image" class="form-control">
                         <br>
-                        <button class="btn btn-primary" type="submit">Sačuvaj</button>
-                    </div>
+                        <button class="custom-btn" type="submit">Sačuvaj</button>
+                        </div>
                 </form>
             </div>
         </div>
@@ -61,14 +102,14 @@
             <br>
             <div class="row">
               @foreach ($news as $new)
-                <div class="col-sm-6 col-lg-4 col-xl-4">
-                    <div class="single-home-blog">
+              <div class="col-sm-4 mb-4"> <!-- Adjusted column size for three columns per row -->
+              <div class="single-home-blog">
                         <div class="card">
                         @if($new->image)
-                        <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top" alt="blog">
-                    @else
-                        <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" alt="blog">
-                    @endif
+                        <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
+                        @else
+                        <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog">
+                        @endif
                             <div class="card-body">
                                 <a href="/login">
                                     <h5 class="card-title" style="color: black">{{$new['name']}}</h5>

@@ -30,7 +30,7 @@
           <div class="footer-div">
             <div class="container">
               <p class="text-center">Copyright &copy; 2023
-                <br> Developed by Dzejlana Halilović</p>
+                <br> Developed by Elma Mujović</p>
             </div>
           </div>
         </footer>

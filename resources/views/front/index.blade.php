@@ -33,7 +33,7 @@
     </div>
   </section> -->
   <div class="tekst">
-    <p>Dobrodošli na mesto gde se svako dete razvija, uči i raste kroz bezbedno, podržavajuće i kreativno okruženje.</p>
+    <p class="poruka">Dobrodošli na mesto gde se svako dete razvija, uči i raste kroz bezbedno, podržavajuće i kreativno okruženje.</p>
    
 </div>
 <div class="ikonice-container">
@@ -55,6 +55,7 @@
 </div>
 
 <!-- Dodati novi divovi ispod ikonica -->
+<div class="article-section">
 <div class="naslov-div ">
     <h3><a href="{{ route('sta_je_stem') }}">Šta je to STEM?</a></h3>
     <p><a class="last-div" href="">Pogledaj video</a></p>
@@ -76,29 +77,29 @@
     <p><a class="last-div" href="">Pogledaj video</a></p>
 </div>
 
-
+</div>
     </section>
     <section class="blog_part section_padding" >
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-2">
                     <div class="section_tittle text-center">
-                        <p style="color:black;">Najaktuelnije</p>
-                        <h2>Novosti</h2>
+                        <h2 class="h22">NOVOSTI</h2>
+                        
                     </div>
                 </div>
             </div>
             <div class="row">
     @foreach ($news as $new)
-    <div class="col-sm-6 col-lg-4 col-xl-4">
+    <div class="col-sm-4 col-lg-4 col-xl-4">
         <div class="single-home-blog">
-            <div class="card">
+            <div class="card" >
                 @if($new->image)
-                    <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top" alt="blog">
+                <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
                 @else
-                    <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" alt="blog">
+                <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog">
                 @endif
-                <div class="card-body">
+                <div class="card-body" style="background-color: #e0e0e0; ">
                     <a href="/login">
                         <h5 class="card-title">{{ $new['name'] }}</h5>
                     </a>

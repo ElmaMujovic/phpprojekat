@@ -115,8 +115,18 @@ a {
 
 /* Stilovi za naslove i opise ispod ikonica */
 h3, p {
-    margin: 10px 0; /* Dodaj prostor između naslova/opisa i drugih elemenata */
+    margin: 10px 0;
+    font-size: 20px; /* Dodaj prostor između naslova/opisa i drugih elemenata */
 }
+.poruka {
+    font-size: 24px; /* Malo veća veličina fonta */
+    line-height: 1.6; /* Visina linije */
+    text-align: center; /* Centriranje teksta */
+  
+    box-shadow: 0px 4px 8px rgba(206, 165, 165, 0.1); /* Senka */
+    font-family: 'Arial', sans-serif; /* Font familija */
+}
+
 
 .pocetna-opis {
     margin-top: 10px; /* Prostor između ikonica i opisa */
@@ -130,38 +140,73 @@ h3, p {
 .ikonica:hover {
     transform: scale(1.1); /* Povećaj veličinu containera na hover */
 }
-/* Stilizacija naslov-diva */
+
+.article-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .naslov-div {
-    text-align: center; /* Centriranje teksta */
-    margin: 20px auto; /* Postavljamo margin za automatsko centriranje */
-    padding: 15px; /* Unutrašnji prostor */
-    background-color: #3498db; /* Plava boja pozadine */
-    border-radius: 10px; /* Zaobljeni ivičnjaci */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tranzicija boje pozadine i senke */
-    max-width: 500px; /* Maksimalna širina diva */
+    flex: 1 1 45%; /* Adjust width as needed */
+    text-align: center;
+    margin: 20px 10px;
+    padding: 15px;
+    background-color: #3498db;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 500px;
     height: 130px;
-    box-shadow: 0px 8px 8px rgba(209, 137, 137, 0.1); /* Dodaj senku */
+    box-shadow: 0px 8px 8px rgba(209, 137, 137, 0.1);
 }
 
-/* Promena boje pozadine na hover */
 .naslov-div:hover {
-    background-color: #2980b9; /* Tamnija nijansa plave */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Povećaj senku na hover */
+    background-color: #2980b9;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Stilizacija linkova */
 .naslov-div a {
-    text-decoration: none; /* Uklanjanje podvučenosti linkova */
-    color: #fff; /* Bela boja teksta */
-    transition: color 0.3s ease; /* Tranzicija boje teksta */
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-/* Promena boje teksta na hover */
 .naslov-div a:hover {
-    color: #f39c12; /* Narandžasta boja */
+    color: #f39c12;
 }
+
 
 .last-div {
     margin-top: 20px; /* Dodatni razmak iznad Pogledaj video linkova */
     display: inline-block; /* Postavljanje kao blok elementa da bi mogli da koristimo margin-top */
+}
+
+
+.h22{
+    text-align: center; /* Centriranje teksta */
+    font-size: 2.5em; /* Relativno velika veličina fonta */
+    font-weight: bold; /* Podebljan tekst */
+    margin: 20px 0; /* Margina iznad i ispod */
+    position: relative; /* Relativni položaj za pseudo-element */
+}
+
+.h22::before {
+    content: ''; /* Dodavanje pseudo-elementa */
+    position: absolute; /* Apsolutni položaj */
+    bottom: -5px; /* Položaj ispod naslova */
+    left: 50%; /* Centriranje horizontalno */
+    transform: translateX(-50%); /* Pomeranje unazad za 50% širine elementa */
+    width: 50%; /* Širina ispod linije */
+    height: 2px; /* Debljina linije */
+   
+}
+
+.single-home-blog .card {
+    transition: box-shadow 0.3s ease; /* Dodajemo tranziciju za glatko prelazak */
+
+}
+
+.single-home-blog .card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6); /* Dodajemo senku na hover */
+    
 }

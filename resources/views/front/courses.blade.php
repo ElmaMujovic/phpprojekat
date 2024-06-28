@@ -5,8 +5,8 @@
         <div class="row justify-content-center">
             <div class="col-xl-5">
                 <div class="section_tittle text-center">
-                    <p>Kursevi</p>
-                    <h2>Aktivni Kursevi</h2>
+                    
+                    <h2>Aktivne teme</h2>
                 </div>
             </div>
         </div>
