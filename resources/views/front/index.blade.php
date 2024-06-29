@@ -95,7 +95,7 @@
         <div class="single-home-blog">
             <div class="card" >
                 @if($new->image)
-                <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
+                <img src="{{ asset('storage' . $new->image) }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
                 @else
                 <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog">
                 @endif

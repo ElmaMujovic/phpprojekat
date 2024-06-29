@@ -1,24 +1,210 @@
 @extends('front.layouts.layoutteacher')
 @section('content')
+
+<style>
+    
+.aktivne-teme-title {
+    text-align: center; /* Centriranje teksta */
+    font-size: 64px; /* Veličina fonta */
+    font-weight: bold; /* Podebljan tekst */
+    color: orange; /* Boja teksta */
+    margin-bottom: 20px; /* Margina ispod naslova */
+    text-transform: uppercase; /* Velika slova */
+    letter-spacing: 2px; /* Razmak između slova */
+    position: relative; /* Relativni položaj za pseudo-element */
+}
+
+.aktivne-teme-title::after {
+    content: ''; /* Dodavanje pseudo-elementa */
+    position: absolute; /* Apsolutni položaj */
+    left: 50%; /* Centriranje horizontalno */
+    bottom: -10px; /* Položaj ispod naslova */
+    transform: translateX(-50%); /* Pomeranje unazad za 50% širine elementa */
+    width: 70px; /* Širina linije */
+    height: 4px; /* Visina linije */
+    background-color: #e0e0e0; /* Promena boje linije u narandžastu */
+    border-radius: 2px; /* Zaobljeni krajevi linije */
+
+    
+}
+.btn_7 {
+    background-color: #f0f0f0; /* Pozadinska boja dugmeta */
+    color: black; /* Boja teksta */
+    border: 2px solid #ccc; /* Boja ivice */
+    padding: 10px 20px; /* Unutrašnje margine */
+    text-align: center; /* Centriranje teksta */
+    text-decoration: none; /* Bez podvlačenja teksta */
+    display: inline-block; /* Inline-block za margine */
+    font-size: 16px; /* Veličina fonta */
+    margin: 4px 2px; /* Margine oko dugmeta */
+    cursor: pointer; /* Kursor ruke kada se prelazi preko dugmeta */
+    border-radius: 5px; /* Zaobljeni uglovi */
+    transition-duration: 0.4s; /* Vreme trajanja tranzicije */
+    margin-left: 120px;
+    margin-top: 40px;
+    width: 220px;
+}
+
+.btn_7:hover {
+    background-color: #ddd; /* Promena boje pozadine kada je kursor iznad */
+    border: 2px solid #aaa; /* Promena boje ivice kada je kursor iznad */
+}
+
+.btn_8 {
+    background-color: #f0f0f0; /* Pozadinska boja dugmeta */
+    color: black; /* Boja teksta */
+    border: 2px solid #ccc; /* Boja ivice */
+    padding: 10px 20px; /* Unutrašnje margine */
+    text-align: center; /* Centriranje teksta */
+    text-decoration: none; /* Bez podvlačenja teksta */
+    display: inline-block; /* Inline-block za margine */
+    font-size: 16px; /* Veličina fonta */
+    margin: 4px 2px; /* Margine oko dugmeta */
+    cursor: pointer; /* Kursor ruke kada se prelazi preko dugmeta */
+    border-radius: 5px; /* Zaobljeni uglovi */
+    transition-duration: 0.4s; /* Vreme trajanja tranzicije */
+    margin-left: 120px;
+    margin-top: 40px;
+    width: 120px;
+}
+
+.btn_8:hover {
+    background-color: #ddd; /* Promena boje pozadine kada je kursor iznad */
+    border: 2px solid #aaa; /* Promena boje ivice kada je kursor iznad */
+}
+
+
+<style>
+.card {
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #f0f0f0;
+    
+}
+
+.card:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    background-color: #e0e0e0;
+}
+
+.card-img-top.special_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+        margin-left: 10px; /* Pomeranje kartice ulevo */
+
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .btn_7
+    {
+        margin-left:30px;
+        width: 150px; 
+        font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+}
+
+
+<style>
+.card {
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #f0f0f0;
+}
+
+.card:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    background-color: #e0e0e0;
+}
+
+.card-img-top.special_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: black;
+}
+
+@media (max-width: 992px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-bottom: 10px;
+    }
+}
+</style>
+
+</style>
+
+</style>
 <div class="section-2">
     <div class="blog_part section_padding" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <h1>Nova tema:</h1>
+        <h1 class="aktivne-teme-title">Nova tema:</h1>
         <label for="modal-switch" class="btn btn-default btn-primary custom-button" role="button" data-toggle="modal" data-target="#addCourseModal">Formiraj novu temu</label>
         <label class="btn btn-default btn-primary custom-button" onclick="myFunctionCourse()" role="button">Postavi materijal</label>
           </div>
          <div class="row">
         <div hidden id="adcourse" class="col-sm-6">
                 <div style="background-color:#2530ae98;border:1px solid black;border-radius:10px;" class="card">
-                    <div class="card-body">
-                        <div  class="card-body">
+                    <div class="card-body" style="background-color: #85adad;  ">
+                        <div   class="card-body">
                             <button onclick="myFunctionTest()" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">
                                 &times;
                            </span>
+                           
                            </button><br>
                         <form action="{{ route('addLectures') }}" method="POST" enctype="multipart/form-data">
                             {{@csrf_field() }}
-                            <p>Odaberi temu</p>
+                            <p  style="color: black; font-weight: bold; font-size: 18px; margin-bottom: 10px; display: block; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;">Odaberi temu:</p>
                             <select class="form-control form-control-sm" name="course">
                                 @foreach ($courses as $course)
                                 @if ( $course->state=='otvoren' && Session::get('loginId')==$course->idUser)
@@ -26,13 +212,13 @@
                                 @endif
                                 @endforeach
                             </select>
-                            <p class="mt-1" for="picturenews">Opis materijala: </p>
+                            <p  style="color: black; font-weight: bold; font-size: 18px; margin-bottom: 10px; display: block; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;" class="mt-1" for="picturenews">Opis materijala: </p>
                         <textarea type="text" class="form-control form-control-sm"  style="height:68px;"  name="textlecture" id="textlecture"></textarea>
                         <br>
-                        <p class="mt-1" for="picturenews">Materijal: </p>
+                        <p  style="color: black; font-weight: bold; font-size: 18px; margin-bottom: 10px; display: block; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;" class="mt-1" for="picturenews">Materijal: </p>
                         <input type="file" class="form-control form-control-sm"  style="height: 38px;"  name="file" id="file" />
                         <br>
-                        <button class="btn_1">Sačuvaj materijal</button>
+                        <button class="btn_7" >Sačuvaj materijal</button>
                     </form>
                     </div>
                 </div>
@@ -51,7 +237,7 @@
         <div class="modal-dialog" role="document">
             <form action="{{ route('addCourse') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="modal-content">
+                <div class="modal-content" style="background-color: #85adad;">
                     <div class="modal-header">
                         <label for="modal-switch" class="close" data-dismiss="modal" aria-label="Close" style="display: flex; align-items: center;">
                             <span aria-hidden="true">
@@ -62,7 +248,7 @@
                         <input type="text" id="idUser" name="idUser" hidden value="{{Session::get('loginId')}}"/>
                         <input type="text" id="imePredavaca" name="imePredavaca" hidden value="{{Session::get('name')}} {{Session::get('lastname')}} "/>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" >
                         <label>Tema:</label>
                         <input type="text" class="form-control form-control-sm" style="height: 38px;" name="course" id="course" placeholder="Enter course name" required>
                         <br>
@@ -74,7 +260,7 @@
                         <input type="text" class="form-control form-control-sm" hidden style="height: 38px;" name="state" id="state" value="otvoren"/>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Sačuvaj</button>
+                        <button type="submit" class="btn_8">Sačuvaj</button>
                     </div>
                 </div>
             </form>
@@ -85,88 +271,88 @@
     <h1>Zatvorene teme:</h1>
     <br>
     <div class="row">
-        @foreach ($courses as $course)
-        @if ($course->state=='zatvoren' && Session::get('loginId')==$course->idUser)
-          <div class="col-sm-6">
-              <div class="single-home-blog">
-                  <div class="card">
-                      <img src="/images/{{$course->image}}" class="card-img-top" alt="blog">
-                      <div class="card-body">
-                          <a href="/">
-                            <p hidden href="#">{{$course->id}}</p>
-                            <h5 class="card-title">{{$course->course}}</h5>
-                          </a>
-                          <ul>
-                            <li><p style="color:#7facf0">Predavač:</p></li>
-                            <li> {{$course['imePredavaca']}}</li>
-                          </ul><br>
-                          <p >{{$course['infomation']}}</p>
-                          <h4>Predavanja:</h4><br>
-                          @foreach ($lectures as $lecture )
-                          @if ($course->course==$lecture->course)
-                          <ul>
-                            <li>{{$lecture->textlecture}}</dt>
-                            <li>- <span class="fa fa-file-text"></span> {{$lecture->file}}</dd>
-                           </ul>
-                          @endif
-                          @endforeach
-                          <p style="color:#7facf0">{{$course->state}}</p>
-                          <ul>
-                            <li style="color: black"><span class="fa fa-calendar"></span>{{$course->updated_at}}</li>
-
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          @endif
-        @endforeach
+    @foreach ($courses as $course)
+    @if ($course->state == 'zatvoren' && Session::get('loginId') == $course->idUser)
+    <div class="col-sm-6 col-md-4">
+        <div class="single-home-blog">
+            <div class="card">
+                <img src="/images/{{$course->image}}" class="card-img-top special_img" alt="blog">
+                <div class="card-body">
+                    <a href="/">
+                        <p hidden href="#">{{$course->id}}</p>
+                        <h5 class="card-title">{{$course->course}}</h5>
+                    </a>
+                    <ul>
+                        <li><p style="color:#7facf0">Predavač:</p></li>
+                        <li> {{$course['imePredavaca']}}</li>
+                    </ul><br>
+                    <p>{{$course['infomation']}}</p>
+                    <h4>Predavanja:</h4><br>
+                    @foreach ($lectures as $lecture )
+                    @if ($course->course == $lecture->course)
+                    <ul>
+                        <li>{{$lecture->textlecture}}</li>
+                        <li>- <span class="fa fa-file-text"></span> {{$lecture->file}}</li>
+                    </ul>
+                    @endif
+                    @endforeach
+                    <p style="color:#7facf0">{{$course->state}}</p>
+                    <ul>
+                        <li style="color: black"><span class="fa fa-calendar"></span>{{$course->updated_at}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    @endif
+    @endforeach
+</div>
+
     <h1>  Otvorene teme: </h1>
     <br>
-    <div class="row" >
-        @foreach ($courses as $course )
-        @if ($course->state=='otvoren' && Session::get('loginId')==$course->idUser)
-          <div class="col-sm-4" >
-              <div class="single-home-blog">
-                  <div class="card">
-                      <img src="/images/{{$course->image}}" class="card-img-top" alt="blog" style="height:20%">
-                      <div class="card-body">
-                          <a href="/">
-                            <h5 class="card-title">{{$course->course}}</h5>
-                          </a>
-                          <ul>
-                            <li><p style="color: black">Predavač:</p></li>
-                            <li style="color: black"> {{$course['imePredavaca']}}</li>
-                          </ul>
-                           <br>
-                          <p>{{$course['infomation']}}</p>
-                          <h4>Predavanja:</h4><br>
-                          @foreach ($lectures as $lecture )
-                          @if ($course->course==$lecture->course)
-                          <ul>
-                            <li>{{$lecture->textlecture}}</dt>
-                            <li>- <span class="fa fa-file-text"></span> {{$lecture->file}}</dd>
-                           </ul>
-                          @endif
-                          @endforeach
-                          <p style="color:blue">{{$course->state}}</p>
-                          <br>
-                          <form action="closeCourses" method="POST">
-                            <a class="btn_1" href="{{"teacherpage/".$course['id']}}">Zatvori temu </a>
-                            @csrf
-                        </form>
-                          <ul>
-                            <li style="color: black"><span class="fa fa-calendar"></span>{{$course->created_at}}</li>
-
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          @endif
-        @endforeach
+    <div class="row">
+    @foreach ($courses as $course)
+    @if ($course->state == 'otvoren' && Session::get('loginId') == $course->idUser)
+    <div class="col-sm-4">
+        <div class="single-home-blog">
+            <div class="card">
+                <img src="/images/{{$course->image}}" class="card-img-top special_img" alt="blog">
+                <div class="card-body">
+                    <a href="/">
+                        <h5 class="card-title">{{$course->course}}</h5>
+                    </a>
+                    <ul>
+                        <li><p style="color: black">Predavač:</p></li>
+                        <li style="color: black"> {{$course['imePredavaca']}}</li>
+                    </ul>
+                    <br>
+                    <p>{{$course['infomation']}}</p>
+                    <h4>Predavanja:</h4><br>
+                    @foreach ($lectures as $lecture)
+                    @if ($course->course == $lecture->course)
+                    <ul>
+                        <li>{{$lecture->textlecture}}</li>
+                        <li>- <span class="fa fa-file-text"></span> {{$lecture->file}}</li>
+                    </ul>
+                    @endif
+                    @endforeach
+                    <p style="color:blue">{{$course->state}}</p>
+                    <br>
+                    <form action="closeCourses" method="POST">
+                        <a class="btn_1" href="{{"teacherpage/".$course['id']}}">Zatvori temu </a>
+                        @csrf
+                    </form>
+                    <ul>
+                        <li style="color: black"><span class="fa fa-calendar"></span>{{$course->created_at}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    @endif
+    @endforeach
+</div>
+
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
