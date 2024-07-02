@@ -21,19 +21,7 @@
     </div>
  </section>
 
-<!--<section class="slideshow">
-    <div class="mySlides ">
-      <img src="img/slika1.png" style="width: 100%" />
-    </div>
 
-    <div class="mySlides ">
-      <img src="img/slika2jpg.jpg" style="width: 100%" />
-    </div>
-
-    <div class="mySlides ">
-      <img src="img/slider5.jpg" style="width: 100%" />
-    </div>
-  </section> -->
   <div class="tekst">
     <p class="poruka">Dobrodošli na mesto gde se svako dete razvija, uči i raste kroz bezbedno, podržavajuće i kreativno okruženje.</p>
    

@@ -12,6 +12,8 @@ use App\Models\Result;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Nette\Utils\Arrays;
+use App\Models\News;
+
 
 class StudentController extends Controller
 {
@@ -89,5 +91,11 @@ class StudentController extends Controller
         $result_info=Result::all();
         return view('student.studentresult',['results'=>$result_info]);
     }
+    public function naseroditelj()
+{
+    $news = News::all();
+
+    return view('naseroditelj', compact('news'));
+}
 
 }

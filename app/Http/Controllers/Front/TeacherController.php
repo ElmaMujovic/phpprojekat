@@ -12,6 +12,7 @@ use App\Models\Tests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\News;
 
 class TeacherController extends Controller
 {
@@ -136,6 +137,12 @@ public function removeStudent(Request $request)
     } else {
         return redirect()->back()->with('error', 'Greška prilikom uklanjanja korisnika sa kursa.');
     }
+}
+public function nasevaspitac()
+{
+    $news = News::all(); // Fetch all news or use any specific query as needed
+
+    return view('nasevaspitac', compact('news'));
 }
 
 }

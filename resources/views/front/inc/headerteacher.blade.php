@@ -180,6 +180,12 @@ input[type=checkbox]:checked ~ .menu {
 						<span>Pocetna</span>
 					</a>
 				</li>
+        <li class="nav-item">
+					<a href="/srecnovaspitac"  class="nav-link">
+
+						<span>Srecno mesto</span>
+					</a>
+				</li>
 				<li class="nav-item">
 					<a href="/teacherpage"  class="nav-link">
 
