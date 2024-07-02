@@ -125,4 +125,17 @@ class TeacherController extends Controller
 
     return view('front.polaznici', ['enrols' => $enrols]);
 }
+public function removeStudent(Request $request)
+{
+    $enrollId = $request->input('enrollId');
+    $enrollment = Enrolled::find($enrollId);
+
+    if ($enrollment) {
+        $enrollment->delete();
+        return redirect()->back()->with('success', 'Korisnik uspešno uklonjen sa kursa.');
+    } else {
+        return redirect()->back()->with('error', 'Greška prilikom uklanjanja korisnika sa kursa.');
+    }
+}
+
 }

@@ -2,15 +2,23 @@
 
 @section('content')
 <style>
-    /* Sakrivanje tabele */
+    /* Custom CSS styles */
     #tabela {
         display: none;
+    }
+
+    #myChart {
+        margin-top: 20px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 </style>
 
 <div class="section-2">
     <div class="blog_part section_padding">
-        <h1>Rezultat testa: <b>{{$tests->nameT}}</b></h1>
+        <h1>Rezultat testa: <b>{{ $tests->nameT }}</b></h1>
         <br>
         <table id="tabela">
             <thead>
@@ -22,17 +30,19 @@
                     <th>Broj pitanja:</th>
                 </tr>
             </thead>
-            @foreach ($results as $re)
-                @if($re->test_id==$tests->id)
-                <tr>
-                    <td>{{$re->users[0]['firstname']}}</td>
-                    <td>{{$re->users[0]['lastname']}}</td>
-                    <td>{{$re->yes_ans}}</td>
-                    <td>{{$re->no_ans}}</td>
-                    <td>{{$re->yes_ans + $re->no_ans}}</td>
-                </tr>
-                @endif
-            @endforeach
+            <tbody>
+                @foreach ($results as $re)
+                    @if ($re->test_id == $tests->id)
+                        <tr>
+                            <td>{{ $re->users[0]['firstname'] }}</td>
+                            <td>{{ $re->users[0]['lastname'] }}</td>
+                            <td>{{ $re->yes_ans }}</td>
+                            <td>{{ $re->no_ans }}</td>
+                            <td>{{ $re->yes_ans + $re->no_ans }}</td>
+                        </tr>
+                    @endif
+                @endforeach
+            </tbody>
         </table>
         <canvas id="myChart" width="400" height="200"></canvas>
     </div>
@@ -42,26 +52,26 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    // Prikupljanje podataka iz tabele
+    // Retrieve data from the table
     var table = document.getElementById('tabela');
     var rows = table.getElementsByTagName('tr');
     var positiveCount = 0;
     var negativeCount = 0;
     var questionCount = 0;
 
-    for (var i = 1; i < rows.length; i++) { // Preskačemo prvi redak koji je zaglavlje
+    for (var i = 1; i < rows.length; i++) { // Skip the header row
         var cells = rows[i].getElementsByTagName('td');
         positiveCount += parseInt(cells[2].innerText);
         negativeCount += parseInt(cells[3].innerText);
         questionCount += parseInt(cells[4].innerText);
     }
 
-    // Kreiranje grafikona
+    // Create chart
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Broj pozitivnih', 'Broj negativnih', 'Ukupno pitanja'],
+            labels: ['Broj pozitivnih DA', 'Broj negativnih NE', 'Ukupno pitanja'],
             datasets: [{
                 label: 'Rezultati testa',
                 data: [positiveCount, negativeCount, questionCount],

@@ -1,5 +1,5 @@
 </div>
-<div class="footer" style="background-color: #759bd4">
+<div class="footer" style="background-color: #3498db;">
     <div class="container-fluid">
          <div class="copyright_part_text text-center">
             <div class="row">

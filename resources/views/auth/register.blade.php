@@ -10,12 +10,14 @@
 </head>
 <style>
     body {
-  background-image: url("img/slikapoz.jpg");
-  background-size: cover;
-  background-position: center;
-
-
-}
+            background-color: silver;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
 </style>
 <body >
@@ -119,5 +121,9 @@
     </div>
 @endsection
 </body>
+
+
 <script src="js/register.js"></script>
+
+
 </html>

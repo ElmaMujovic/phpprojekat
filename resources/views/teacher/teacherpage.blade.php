@@ -313,7 +313,7 @@
     <div class="row">
     @foreach ($courses as $course)
     @if ($course->state == 'otvoren' && Session::get('loginId') == $course->idUser)
-    <div class="col-sm-4">
+    <div class="col-sm-4 col-lg-4 col-xl-4">
         <div class="single-home-blog">
             <div class="card">
                 <img src="/images/{{$course->image}}" class="card-img-top special_img" alt="blog">

@@ -27,6 +27,54 @@
     .custom-btn:active {
       background-color: #c0432a;
     }
+    .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px; /* Adjust margin to create space between columns */
+}
+
+.col-sm-4, .col-lg-4, .col-xl-4 {
+    flex: 1 1 calc(33.333% - 30px); /* Adjust width to fit three columns with space between */
+    margin: 15px; /* Add margin to create space between cards */
+}
+
+.single-home-blog {
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.card {
+    height: 100%;
+}
+.card:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    background-color: #f5f5f5;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul li {
+    color: black;
+}
   </style>
 
 <div class="section-2">
@@ -100,13 +148,13 @@
 </div>
 
             <br>
-            <div class="row">
+            <div class="row2">
               @foreach ($news as $new)
-              <div class="col-sm-4 mb-4"> <!-- Adjusted column size for three columns per row -->
+              <div class="col-sm-4 col-lg-4 col-xl-4"> <!-- Adjusted column size for three columns per row -->
               <div class="single-home-blog">
                         <div class="card">
                         @if($new->image)
-                        <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
+                        <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top"  alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
                         @else
                         <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog">
                         @endif

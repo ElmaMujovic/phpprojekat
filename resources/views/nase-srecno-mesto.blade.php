@@ -24,9 +24,10 @@
             color: white;
             padding: 40px; /* Povećan padding */
             border-radius: 30px;
-            width: 300px; /* Povećana širina vertikalnih divova */
+            width: 450px; /* Povećana širina vertikalnih divova */
             margin-right: 30px; /* Dodatni razmak između divova */
             position: relative; /* Dodata pozicija relativna za oblik na dnu */
+            margin-bottom:10px;
         }
         .slika-vertikalni-div {
             width: 127%;
@@ -122,7 +123,7 @@ h3{
         <div class="donji-oblik"></div> <!-- Dodatni oblik na dnu -->
         <h3 class="novoo"> Poučne aktivnosti za vaspitače</h3>
         <p>Vaspitači mogu pronaći korisne resurse koji olakšavaju njihov rad u učenju i razvoju dece. Sa jasnim smernicama za implementaciju učenja</p>
-        <a href="{{ route('poucne') }}" class="procitaj-vise">Pročitaj više</a>
+        <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a>
     </div>
 
     <div class="vertikalni-div">
@@ -130,7 +131,7 @@ h3{
         <div class="donji-oblik"></div> <!-- Dodatni oblik na dnu -->
         <h3>Resursi za roditelje</h3>
         <p>Roditelji mogu računati na obimnu kolekciju resursa koji podržavaju njihovu ulogu u vaspitanju i edukaciji svoje dece. Saveti stručnjaka, relevantni  </p>
-        <a href="{{ route('resursi') }}" class="procitaj-vise">Pročitaj više</a>
+        <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a>
     </div>
 
     <div class="vertikalni-div">
@@ -138,7 +139,7 @@ h3{
         <div class="donji-oblik"></div> <!-- Dodatni oblik na dnu -->
         <h3>Zabava kroz učenje za decu</h3>
         <p> Naš sajt pruža deci predškolskog uzrasta nezaboravno iskustvo učenja kroz igru. Interaktivne igre, šarene animacije i maštovite priče podstiču radoznalost</p>
-        <a href="{{ route('zabava') }}"class="procitaj-vise">Pročitaj više</a>
+        <a href="{{ route('nase-srecno-mesto') }}"class="procitaj-vise">Pročitaj više</a>
 
         </div>
     </div>

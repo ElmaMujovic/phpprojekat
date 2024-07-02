@@ -25,3 +25,21 @@ menu_item.forEach((item) => {
 	});
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    var birthDateInput = document.getElementById('birthDate');
+    var birthDateError = document.getElementById('birthDateError');
+
+    birthDateInput.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        var selectedMonth = selectedDate.getMonth() + 1; // getMonth returns 0-based index
+
+        if (selectedMonth < 1 || selectedMonth > 12) {
+            birthDateError.style.display = 'block';
+            this.setCustomValidity('Mesec mora biti između 1 i 12!');
+        } else {
+            birthDateError.style.display = 'none';
+            this.setCustomValidity('');
+        }
+    });
+});

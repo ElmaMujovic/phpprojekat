@@ -39,7 +39,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px;
-      background-color: #7ba3df;
+      background-color: #3498db;
       color: #fff;
     height: 80px;
     }
@@ -188,7 +188,7 @@ input[type=checkbox]:checked ~ .menu {
 
     <nav class="navbar">
         <!-- LOGO -->
-        <div class="logo" style="color: black">Fizix</div>
+        <div class="logo" style="color: black">Maslacak</div>
 
         <!-- NAVIGATION MENU -->
         <ul class="nav-links">

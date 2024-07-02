@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
+
 <body>
+    
 
  <section>
  <div class="mySlides ">
@@ -89,23 +91,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row2">
     @foreach ($news as $new)
     <div class="col-sm-4 col-lg-4 col-xl-4">
         <div class="single-home-blog">
-            <div class="card" >
+            <div class="card">
                 @if($new->image)
-                <img src="{{ asset('storage' . $new->image) }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
+                <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top" alt="blog">
                 @else
                 <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog">
                 @endif
-                <div class="card-body" style="background-color: #e0e0e0; ">
+                <div class="card-body">
                     <a href="/login">
-                        <h5 class="card-title">{{ $new['name'] }}</h5>
+                        <h5 class="card-title">{{ $new->name }}</h5>
                     </a>
-                    <p>{{ $new['detail'] }}</p>
+                    <p>{{ $new->detail }}</p>
                     <ul>
-                        <li style="color: black">datum: {{ $new['created_at'] }}</li>
+                        <li>datum: {{ $new->created_at }}</li>
                     </ul>
                 </div>
             </div>
@@ -113,6 +115,7 @@
     </div>
     @endforeach
 </div>
+
 
     </section>
 <script src="js/app.js"></script>

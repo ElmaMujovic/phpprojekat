@@ -55,7 +55,7 @@ class RegisterController extends Controller
     {
         $request->validate([
             'email' => 'unique:users',
-            `jmbg`=>'unique:users'
+            'jmbg' => 'unique:users',
         ]);
 
         $user= new User();

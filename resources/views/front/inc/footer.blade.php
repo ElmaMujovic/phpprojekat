@@ -8,7 +8,7 @@
 </head>
 <style>
     .footer-div {
-  background-color:#7facf0;
+      background-color: #3498db;
   color: #fff;
   padding: 20px;
 }

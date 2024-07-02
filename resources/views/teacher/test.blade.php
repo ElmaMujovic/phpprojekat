@@ -1,5 +1,144 @@
 @extends('front.layouts.layoutteacher')
 @section('content')
+<style>
+    .section-2 {
+        padding: 20px;
+    }
+
+    .blog_part {
+        padding: 20px;
+    }
+
+    .btn-default.btn-primary {
+        background-color: #b2ccf2;
+        color: black;
+        cursor: pointer;
+    }
+
+    .card {
+        background-color: rgba(252, 252, 255, 0.892);
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+        padding: 0; /* Adjust as needed */
+    }
+
+    .card-body button.close {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        float: right;
+        font-size: 20px;
+        margin-top: -10px;
+    }
+
+    .card-body form {
+        margin-top: 10px;
+    }
+
+    .form-control-sm {
+        height: 38px;
+    }
+
+    .btn_1 {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #b2ccf2;
+        color: white;
+    }
+
+    .btn_4 {
+        border: 1px solid blue;
+        margin-bottom: 6px;
+        height: 35px;
+        border-radius: 6px;
+        background-color: transparent;
+        color: blue;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .modal-backdrop.fade {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1040;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        border: 1px solid #999;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    .modal-header .close {
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: #000;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .modal-body {
+        padding-top: 15px;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: right;
+    }
+
+    .form-check {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .card h4 {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+</style>
 
 <div class="section-2">
     <div class="blog_part section_padding">

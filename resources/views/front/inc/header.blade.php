@@ -39,7 +39,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px;
-      background-color: #7ba3df;
+      background-color: #3498db;
       color: #fff;
     height: 80px;
     }
@@ -166,7 +166,7 @@ input[type=checkbox]:checked ~ .menu {
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a style="white;font-size:35px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="navbar-brand" href="/">
-                            Fizix</a>
+                            Maslacka</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">

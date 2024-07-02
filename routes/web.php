@@ -119,3 +119,4 @@ Route::get('/nasevaspitac', function () {
 Route::get('/zaroditelje', function () {
     return view('zaroditelje');
 })->name('zaroditelje');
+Route::post('/remove-student', [TeacherController::class, 'removeStudent'])->name('removeStudent');
