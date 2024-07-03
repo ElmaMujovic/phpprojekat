@@ -13,149 +13,163 @@
     @yield('styles')
 </head>
 <style>
-    /* UTILITIES */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        /* UTILITIES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-    }
+        a {
+            text-decoration: none;
+        }
 
-    a {
-      text-decoration: none;
-    }
+        li {
+            list-style: none;
+        }
 
-    li {
-      list-style: none;
-    }
+        /* NAVBAR STYLING STARTS */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+            height: 80px;
+        }
 
-    /* NAVBAR STYLING STARTS */
+        .nav-links a {
+            color: black;
+        }
+
+        /* LOGO */
+        .logo {
+            font-size: 32px;
+        }
+
+        /* NAVBAR MENU */
+        .menu {
+            display: flex;
+            gap: 1em;
+            font-size: 18px;
+        }
+
+        .menu li:hover {
+            background-color: #cadefc;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .menu ul {
+            display: flex;
+        }
+
+        .menu li {
+            padding: 5px 14px;
+            display: flex;
+        }
+
+        /* DROPDOWN MENU */
+        .services {
+            position: relative;
+        }
+
+        .dropdown {
+            background-color: #5080c7;
+            padding: 1em 0;
+            position: absolute;
+            display: none;
+            border-radius: 8px;
+            top: 35px;
+        }
+
+        .dropdown li + li {
+            margin-top: 10px;
+        }
+
+        .dropdown li {
+            padding: 0.5em 1em;
+            width: 8em;
+            text-align: center;
+        }
+
+        .dropdown li:hover {
+            background-color: #cadefc;
+        }
+
+        .services:hover .dropdown {
+            display: block;
+        }
+
+        /* RESPONSIVE NAVBAR MENU STARTS */
+
+        /* CHECKBOX HACK */
+        input[type=checkbox] {
+            display: none;
+        }
+
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            user-select: none;
+            cursor: pointer;
+        }
+
+       /* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
     .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-      background-color: #3498db;
-      color: #fff;
-    height: 80px;
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
     }
 
-    .nav-links a {
-      color: black;
-    }
-
-    /* LOGO */
-    .logo {
-      font-size: 32px;
-    }
-
-    /* NAVBAR MENU */
     .menu {
-      display: flex;
-      gap: 1em;
-      font-size: 18px;
-    }
-
-    .menu li:hover {
-      background-color: #cadefc;
-      border-radius: 5px;
-      transition: 0.3s ease;
-    }
-    .menu ul {
-        display: flex;
+        display: none;
+        flex-direction: column;
+        width: 100%;
     }
 
     .menu li {
-      padding: 5px 14px;
-      display: flex;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
     }
 
-    /* DROPDOWN MENU */
-    .services {
-      position: relative;
+    .menu li:hover {
+        background-color: #5080c7;
     }
 
     .dropdown {
-      background-color: #5080c7;
-      padding: 1em 0;
-      position: absolute;
-      display: none;
-      border-radius: 8px;
-      top: 35px;
+        position: static;
     }
 
-    .dropdown li + li {
-      margin-top: 10px;
-    }
-
-    .dropdown li {
-      padding: 0.5em 1em;
-      width: 8em;
-      text-align: center;
-    }
-
-    .dropdown li:hover {
-      background-color: #cadefc;
-    }
-
-    .services:hover .dropdown {
-      display: block;
-    }
-
-    /* RESPONSIVE NAVBAR MENU STARTS */
-
-    /* CHECKBOX HACK */
-
-    input[type=checkbox] {
-      display: none;
-    }
-
-    /* HAMBURGER MENU */
     .hamburger {
-      display: none;
-      font-size: 24px;
-      user-select: none;
+        display: block;
     }
 
-    /* APPLYING MEDIA QUERIES */
-    @media (max-width: 768px) {
-.navbar {
-  flex-direction: column;
-  height: 150px;
-  justify-content: space-around;
-  display: flex;
+    input[type=checkbox]:checked ~ .menu {
+        display: block;
+        animation: slideDown 0.5s ease;
+    }
 
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
-
-.menu {
-  display: none;
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.menu li {
-  padding: 5px 14px;
-  justify-content: space-between;
-}
-
-.dropdown {
-  position: static;
-}
-
-.hamburger {
-  display: block;
-}
-
-input[type=checkbox]:checked ~ .menu {
-  display: flex;
-}
-}
-  </style>
-
+    </style>
 
 <body>
 {{-- <header style="position: fixed;" class="main_menu home_menu">
