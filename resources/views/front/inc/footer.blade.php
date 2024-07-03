@@ -29,7 +29,7 @@
         <footer>
           <div class="footer-div">
             <div class="container">
-              <p class="text-center">Copyright &copy; 2023
+              <p class="text-center">Copyright &copy; 2024
                 <br> Developed by Elma Mujović</p>
             </div>
           </div>

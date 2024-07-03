@@ -1,4 +1,4 @@
-@extends('front.layouts.layoutteacher')
+@extends('front.layouts.layoutadmin')
 <style>
         .posebana {
             font-size: 12px;

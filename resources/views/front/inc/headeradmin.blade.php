@@ -174,7 +174,7 @@ input[type=checkbox]:checked ~ .menu {
                             id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="/">Početna</a>
+                                    <a class="nav-link" href="/naseadmin">Početna</a>
                                 </li>
                                 
                     <li class="nav-item">
@@ -210,10 +210,10 @@ input[type=checkbox]:checked ~ .menu {
             <div class="menu" >
                 <ul >
                 <li class="nav-item active">
-                        <a class="nav-link" href="/">Početna</a>
+                        <a class="nav-link" href="/naseadmin">Početna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/nase-srecno-mesto">Nase srecno mesto</a>
+                        <a class="nav-link" href="/naseadmin">Nase srecno mesto</a>
                     </li>
 
                     <li class="nav-item" >

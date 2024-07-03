@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<!-- Dodati novi divovi ispod ikonica -->
+
 <div class="article-section">
 <div class="naslov-div ">
     <h3><a href="{{ route('sta_je_stem') }}">Šta je to STEM?</a></h3>

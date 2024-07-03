@@ -2,84 +2,79 @@
 @section('content')
 
 <style>
-    
 .aktivne-teme-title {
-    text-align: center; /* Centriranje teksta */
-    font-size: 64px; /* Veličina fonta */
-    font-weight: bold; /* Podebljan tekst */
-    color: orange; /* Boja teksta */
-    margin-bottom: 20px; /* Margina ispod naslova */
-    text-transform: uppercase; /* Velika slova */
-    letter-spacing: 2px; /* Razmak između slova */
-    position: relative; /* Relativni položaj za pseudo-element */
+    text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
 }
 
 .aktivne-teme-title::after {
-    content: ''; /* Dodavanje pseudo-elementa */
-    position: absolute; /* Apsolutni položaj */
-    left: 50%; /* Centriranje horizontalno */
-    bottom: -10px; /* Položaj ispod naslova */
-    transform: translateX(-50%); /* Pomeranje unazad za 50% širine elementa */
-    width: 70px; /* Širina linije */
-    height: 4px; /* Visina linije */
-    background-color: #e0e0e0; /* Promena boje linije u narandžastu */
-    border-radius: 2px; /* Zaobljeni krajevi linije */
-
-    
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
 }
+
 .btn_7 {
-    background-color: #f0f0f0; /* Pozadinska boja dugmeta */
-    color: black; /* Boja teksta */
-    border: 2px solid #ccc; /* Boja ivice */
-    padding: 10px 20px; /* Unutrašnje margine */
-    text-align: center; /* Centriranje teksta */
-    text-decoration: none; /* Bez podvlačenja teksta */
-    display: inline-block; /* Inline-block za margine */
-    font-size: 16px; /* Veličina fonta */
-    margin: 4px 2px; /* Margine oko dugmeta */
-    cursor: pointer; /* Kursor ruke kada se prelazi preko dugmeta */
-    border-radius: 5px; /* Zaobljeni uglovi */
-    transition-duration: 0.4s; /* Vreme trajanja tranzicije */
+    background-color: #f0f0f0;
+    color: black;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.4s;
     margin-left: 120px;
     margin-top: 40px;
     width: 220px;
 }
 
 .btn_7:hover {
-    background-color: #ddd; /* Promena boje pozadine kada je kursor iznad */
-    border: 2px solid #aaa; /* Promena boje ivice kada je kursor iznad */
+    background-color: #ddd;
+    border: 2px solid #aaa;
 }
 
 .btn_8 {
-    background-color: #f0f0f0; /* Pozadinska boja dugmeta */
-    color: black; /* Boja teksta */
-    border: 2px solid #ccc; /* Boja ivice */
-    padding: 10px 20px; /* Unutrašnje margine */
-    text-align: center; /* Centriranje teksta */
-    text-decoration: none; /* Bez podvlačenja teksta */
-    display: inline-block; /* Inline-block za margine */
-    font-size: 16px; /* Veličina fonta */
-    margin: 4px 2px; /* Margine oko dugmeta */
-    cursor: pointer; /* Kursor ruke kada se prelazi preko dugmeta */
-    border-radius: 5px; /* Zaobljeni uglovi */
-    transition-duration: 0.4s; /* Vreme trajanja tranzicije */
+    background-color: #f0f0f0;
+    color: black;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.4s;
     margin-left: 120px;
     margin-top: 40px;
     width: 120px;
 }
 
 .btn_8:hover {
-    background-color: #ddd; /* Promena boje pozadine kada je kursor iznad */
-    border: 2px solid #aaa; /* Promena boje ivice kada je kursor iznad */
+    background-color: #ddd;
+    border: 2px solid #aaa;
 }
 
-
-<style>
 .card {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     background-color: #f0f0f0;
-    
 }
 
 .card:hover {
@@ -105,24 +100,12 @@
 @media (max-width: 768px) {
     .card {
         margin-bottom: 20px;
-        margin-left: 10px; /* Pomeranje kartice ulevo */
-
+        margin-left: 10px;
     }
 
     .card-title {
         font-size: 18px;
     }
-}
-
-
-
-@media (max-width: 768px) {
-    .btn_7
-    {
-        margin-left:30px;
-        width: 150px; 
-        font-size: 10px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -133,34 +116,6 @@
     .card-title {
         font-size: 16px;
     }
-}
-
-
-<style>
-.card {
-    margin-bottom: 30px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    background-color: #f0f0f0;
-}
-
-.card:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px);
-    background-color: #e0e0e0;
-}
-
-.card-img-top.special_img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.card-title {
-    color: black;
 }
 
 @media (max-width: 992px) {
@@ -182,9 +137,10 @@
 }
 </style>
 
-</style>
 
-</style>
+
+
+
 <div class="section-2">
     <div class="blog_part section_padding" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
         <h1 class="aktivne-teme-title">Nova tema:</h1>
@@ -268,7 +224,7 @@
         </div>
     </div>
     <br>
-    <h1>Zatvorene teme:</h1>
+    <h1 style="text-align: center; margin-top: 20px;">Zatvorene teme:</h1>
     <br>
     <div class="row">
     @foreach ($courses as $course)
@@ -308,7 +264,7 @@
     @endforeach
 </div>
 
-    <h1>  Otvorene teme: </h1>
+    <h1  style="text-align: center; margin-top: 20px;">  Otvorene teme: </h1>
     <br>
     <div class="row">
     @foreach ($courses as $course)

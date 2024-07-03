@@ -45,14 +45,13 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="form-check-label" for="remember" >
-                                        {{ __('Remember Me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                        <button type="submit" style="background-color: rgb(255, 140, 0); color:white; width: 50%;  margin: 0 auto;" onClick="handleSubmit(event)" class="form-control form-control-lg">{{ __('Prijavi se') }}</button>
+                        <button type="submit" style="background-color: rgb(52, 152, 221); color:white; width: 50%;  margin: 0 auto;" onClick="handleSubmit(event)" class="form-control form-control-lg">{{ __('Prijavi se') }}</button>
 
                         <a style="float: right;" class="btn btn-link" href="{{ route('forget.password.get') }}">
                             {{ __('Forgot Your Password?') }}

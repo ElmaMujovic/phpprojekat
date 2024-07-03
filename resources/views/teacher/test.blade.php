@@ -151,7 +151,7 @@
         </div>
         <div class="row">
             <div hidden id="adcourse" class="col-sm-6">
-                <div style="background-color:#2530ae98;border:1px solid black;border-radius:10px;" class="card">
+                <div style="background-color: #85adad; border:1px solid black;border-radius:10px;" class="card">
                     <div class="card-body">
                         <button onclick="myFunctionTest()" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -170,8 +170,8 @@
                             <input type="text" class="form-control form-control-sm" style="height: 38px;" name="nametest" id="nametest" required>
                             <input type="hidden" name="tipetest" value="easy">
                             <br>
-                            <button type="submit" class="btn_1">Sačuvaj Anketu</button>
-                        </form>
+                            <button style="margin-left: calc(50% - 80px);" type="submit" class="btn_1">Sačuvaj Anketu</button>
+                            </form>
                     </div>
                 </div>
             </div>

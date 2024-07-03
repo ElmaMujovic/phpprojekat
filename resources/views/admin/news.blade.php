@@ -6,10 +6,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Visina za centriranje po vertikali */
+      height: 100vh; 
     }
     .custom-btn {
-      background-color: #ff5c33;
+      background-color: RGB(52, 152, 221);
       color: white;
       padding: 10px 20px;
       border: none;
@@ -31,16 +31,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 -15px; /* Adjust margin to create space between columns */
+    margin: 0 -15px; 
 }
 
 .col-sm-4, .col-lg-4, .col-xl-4 {
-    flex: 1 1 calc(33.333% - 30px); /* Adjust width to fit three columns with space between */
-    margin: 15px; /* Add margin to create space between cards */
+    flex: 1 1 calc(33.333% - 30px); 
+    margin: 15px; 
 }
 
 .single-home-blog {
-    margin-bottom: 20px; /* Space between cards */
+    margin-bottom: 20px; 
 }
 
 .card {
@@ -75,6 +75,31 @@ ul {
 ul li {
     color: black;
 }
+@media (max-width: 768px) {
+  .custom-btn {
+    display: block; 
+    margin: 0 auto; 
+    margin-bottom: 20px; 
+  }
+
+}
+@media (max-width: 900px) {
+  .col-sm-4, .col-lg-4, .col-xl-4 {
+    flex: 1 1 100%; 
+    margin: 15px 0;
+  }
+
+  .custom-btn {
+    margin-left: 0; 
+    width: 100%; 
+  }
+
+  .card-img-top {
+    height: auto;
+  }
+}
+
+
   </style>
 
 <div class="section-2">
@@ -83,7 +108,7 @@ ul li {
         <h2 class="col-md-16 text-center">Novosti skole</h2>
         <div class="button-wrapper">
           <button  style="
-      background-color: #ff5c33; /* Boja pozadine dugmeta */
+      background-color: RGB(52, 152, 221); /* Boja pozadine dugmeta */
       color: white; /* Boja teksta dugmeta */
       padding: 10px 20px; /* Unutrašnje margine */
       border: none; /* Uklanja okvir */
@@ -106,7 +131,7 @@ ul li {
                   <br>
                   <div class="col-md-6">
                   @if ($message=Session::get('success'))
-                    <p class="alert alert-danger" style="background-color:  rgb(255, 179, 213); ">{{$message}}</p>
+                    <p class="alert alert-danger" style="background-color:rgb(255, 179, 213); ">{{$message}}</p>
                   @endif
                   </div>
                   @if ($errors->any())
@@ -150,11 +175,11 @@ ul li {
             <br>
             <div class="row2">
               @foreach ($news as $new)
-              <div class="col-sm-4 col-lg-4 col-xl-4"> <!-- Adjusted column size for three columns per row -->
+              <div class="col-sm-4 col-lg-4 col-xl-4"> 
               <div class="single-home-blog">
                         <div class="card">
                         @if($new->image)
-                        <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top"  alt="blog"> <!-- Set height and object-fit for consistent image dimensions -->
+                        <img src="{{ asset('storage/' . $new->image) }}" class="card-img-top"  alt="blog"> 
                         @else
                         <img src="{{ asset('front/img/loginsl.jpg') }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="blog">
                         @endif

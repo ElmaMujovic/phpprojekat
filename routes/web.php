@@ -114,6 +114,7 @@ Route::get('/naseroditelj', function () {
 
 Route::get('/nasevaspitac', [TeacherController::class, 'nasevaspitac'])->name('nasevaspitac');
 Route::get('/naseroditelj', [StudentController::class, 'naseroditelj'])->name('naseroditelj');
+Route::get('/naseadmin', [AdminController::class, 'naseadmin'])->name('naseadmin');
 
 Route::get('/srecnoroditelji', function () {
     return view('srecnoroditelji');
@@ -121,7 +122,9 @@ Route::get('/srecnoroditelji', function () {
 Route::get('/srecnovaspitac', function () {
     return view('srecnovaspitac');
 })->name('srecnovaspitac');
-
+Route::get('/srecnoadmin', function () {
+    return view('srecnoadmin');
+})->name('srecnoadmin');
 
 Route::get('/zaroditelje', function () {
     return view('zaroditelje');

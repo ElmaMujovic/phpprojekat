@@ -1,5 +1,9 @@
 @extends('front.layouts.layoutstudent')
 <style>
+      body, .content, section, .mySlides, .container-vertikalni-divovi {
+    background-color: #f39c12 !important;
+  
+}
         .posebana {
             font-size: 12px;
             color: white;
@@ -87,12 +91,26 @@ h3{
     
 }
 
-        /* Stil za container vertikalnih divova */
-        .container-vertikalni-divovi {
+.container-vertikalni-divovi {
             display: flex;
-            justify-content: center; /* Centralizovanje vertikalnih divova */
-            margin-top: 50px; /* Povećan razmak između gornjeg sadržaja i vertikalnih divova */
+            justify-content: center; 
+            margin-top: 50px; 
+            background-color: orange;
+            margin-bottom:50px;
         }
+
+        @media (max-width: 768px) {
+    .vertikalni-div {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .container-vertikalni-divovi {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
     </style>
 @section('content')
 <section>
@@ -107,21 +125,21 @@ h3{
         <img src="{{ asset('images/teacher.jpg') }}" alt="Opis slike 1" class="slika-vertikalni-div">
         <h3>Poučne aktivnosti za vaspitače</h3>
         <p>Vaspitači mogu pronaći korisne resurse koji olakšavaju njihov rad u učenju i razvoju dece. Sa jasnim smernicama za implementaciju učenja</p>
-        <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a>
+        <!-- <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a> -->
     </div>
 
     <div class="vertikalni-div">
         <img src="{{ asset('images/parent.png') }}" alt="Opis slike 2" class="slika-vertikalni-div">
         <h3>Resursi za roditelje</h3>
         <p>Roditelji mogu računati na obimnu kolekciju resursa koji podržavaju njihovu ulogu u vaspitanju i edukaciji svoje dece. Saveti stručnjaka, relevantni</p>
-        <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a>
+        <!-- <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a> -->
     </div>
 
     <div class="vertikalni-div">
         <img src="{{ asset('images/kindergarten.jpg') }}" alt="Opis slike 3" class="slika-vertikalni-div">
         <h3>Zabava kroz učenje za decu</h3>
         <p>Naš sajt pruža deci predškolskog uzrasta nezaboravno iskustvo učenja kroz igru. Interaktivne igre, šarene animacije i maštovite priče podstiču radoznalost</p>
-        <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a>
+        <!-- <a href="{{ route('nase-srecno-mesto') }}" class="procitaj-vise">Pročitaj više</a> -->
     </div>
 </div>
 @endsection

@@ -39,7 +39,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <p style="color: white;" class="footer-text m-0">
-                             Copyright &copy;<script>document.write(new Date().getFullYear());</script> Sva prava zadržana od <i class="bi bi-gem" style="color: rgb(43, 43, 104);" aria-hidden="true">PHPŠKOLA</i>
+                             Copyright &copy;<script>document.write(new Date().getFullYear());</script> Sva prava zadržana od <i class="bi bi-gem" style="color: rgb(43, 43, 104);" aria-hidden="true">maslacak</i>
                              <i class="bi bi-gem" style="color:rgb(43, 43, 104);" aria-hidden="true"></i></p>
                         </div>
                     </div>

@@ -20,8 +20,8 @@
         justify-content: space-between;
         margin-bottom: 30px;
         transition: box-shadow 0.3s ease, transform 0.3s ease;
-        background-color: #ffffff;
-        border-radius: 10px;
+        background-color: #e1e0e0 !important;
+                border-radius: 10px;
         overflow: hidden;
         flex: 1;
     }

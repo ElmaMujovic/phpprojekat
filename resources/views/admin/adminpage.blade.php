@@ -18,6 +18,8 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-left: -40px; 
+
 }
 
 .my-table th,
@@ -47,38 +49,106 @@
 .my-table a:hover {
     color: darkgreen;
 }
-
 @media screen and (max-width: 768px) {
-    .my-table thead {
-        display: none;
-    }
+  .my-table-wrapper {
+    overflow-x: auto;
+  }
 
-    .my-table,
-    .my-table tbody,
-    .my-table tr,
-    .my-table td {
-        display: block;
-        width: 100%;
-    }
+  .my-table, .my-table thead, .my-table tbody, .my-table th, .my-table td, .my-table tr {
+    display: block;
+  }
 
-    .my-table tr {
-        margin-bottom: 10px;
-        background-color: #fff;
-    }
+  .my-table {
+    min-width: 0;
+  }
 
-    .my-table td {
-        text-align: left;
-        padding-left: 10px;
-    }
+  .my-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
 
-    .my-table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        float: left;
-        text-transform: uppercase;
-    }
+  .my-table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .my-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    margin-bottom: 10px; /* Dodajte malo prostora između ćelija */
+  }
+
+  .my-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 45%; /* Prilagodite širinu labeli */
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  .my-table td:last-child {
+    border-bottom: 0;
+  }
 }
+@media screen and (max-width: 900px) {
+  .my-table-wrapper {
+    overflow-x: auto;
+  }
 
+  .my-table, .my-table thead, .my-table tbody, .my-table th, .my-table td, .my-table tr {
+    display: block;
+  }
+
+  .my-table {
+    min-width: 0;
+  }
+
+  .my-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .my-table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .my-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    margin-bottom: 10px; /* Dodajte malo prostora između ćelija */
+  }
+
+  .my-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 45%; /* Prilagodite širinu labeli */
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  .my-table td:last-child {
+    border-bottom: 0;
+  }
+}
 
 </style>
 

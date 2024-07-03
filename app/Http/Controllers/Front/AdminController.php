@@ -82,5 +82,12 @@ class AdminController extends Controller
         return redirect('adminpage')
                         ->with('success','Obrisali ste Korisnika Aplikacije.');
     }
+    public function naseadmin()
+{
+    $news = News::all(); 
+
+    return view('naseadmin', compact('news'));
+}
+
     
 }

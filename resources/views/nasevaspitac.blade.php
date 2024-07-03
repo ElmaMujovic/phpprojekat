@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
+<style>
+     body, .content, section, .mySlides, .container-vertikalni-divovi {
+    background-color: #f39c12 !important;
+  
+}
+.container-vertikalni-divovi {
+            display: flex;
+            justify-content: center; 
+            margin-top: 50px; 
+            background-color: orange;
+        }
+
+</style>
 
 <body>
     
@@ -21,19 +34,7 @@
     </div>
  </section>
 
-<!--<section class="slideshow">
-    <div class="mySlides ">
-      <img src="img/slika1.png" style="width: 100%" />
-    </div>
 
-    <div class="mySlides ">
-      <img src="img/slika2jpg.jpg" style="width: 100%" />
-    </div>
-
-    <div class="mySlides ">
-      <img src="img/slider5.jpg" style="width: 100%" />
-    </div>
-  </section> -->
   <div class="tekst">
     <p class="poruka">Dobrodošli na mesto gde se svako dete razvija, uči i raste kroz bezbedno, podržavajuće i kreativno okruženje.</p>
    

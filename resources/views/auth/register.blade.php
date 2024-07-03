@@ -109,7 +109,7 @@
                         <p hidden id="roleError" class="text-danger"> Morate izabrati ulogu! </p>
 
                         <div>
-                        <button type="submit" style="background-color:rgb(255, 140, 0); color:white;" onClick="handleSubmit(event)" class="form-control form-control-lg">{{ __('NAPRAVI NALOG') }}</button>
+                        <button type="submit" style="background-color: rgb(52, 152, 221); color: white; width: 50%; margin: 0 auto; display: block;" onClick="handleSubmit(event)" class="form-control form-control-lg">{{ __('NAPRAVI NALOG') }}</button>
                         </div>
                         <a style="float: right;color:black" class="btn btn-link" href="{{ route('login') }}">
                             {{ __('Već imate nalog! Vratite se na stranicu za prijavljivanje!') }}

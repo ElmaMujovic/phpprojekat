@@ -3,21 +3,21 @@
 <style>
 .single_special_cource {
     margin-bottom: 30px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Dodana tranzicija za transformaciju */
-    background-color: #f0f0f0;
-    
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #e0e0e0 !important;
+
 }
 
 .single_special_cource:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1); /* Senka sa više nivoa */
-    transform: translateY(-10px); /* Podiže karticu kada se pređe mišem */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
     background-color: #e0e0e0;
 }
 
 .single_special_cource img.special_img {
     width: 100%;
-    height: 200px; /* Možete prilagoditi visinu po potrebi */
-    object-fit: cover; /* Održavajte razmeru slike */
+    height: 200px;
+    object-fit: cover;
 }
 
 .special_cource_text {
@@ -25,89 +25,86 @@
 }
 
 .aktivne-teme-title {
-    text-align: center; /* Centriranje teksta */
-    font-size: 64px; /* Veličina fonta */
-    font-weight: bold; /* Podebljan tekst */
-    color: orange; /* Boja teksta */
-    margin-bottom: 20px; /* Margina ispod naslova */
-    text-transform: uppercase; /* Velika slova */
-    letter-spacing: 2px; /* Razmak između slova */
-    position: relative; /* Relativni položaj za pseudo-element */
+    text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
 }
 
 .aktivne-teme-title::after {
-    content: ''; /* Dodavanje pseudo-elementa */
-    position: absolute; /* Apsolutni položaj */
-    left: 50%; /* Centriranje horizontalno */
-    bottom: -10px; /* Položaj ispod naslova */
-    transform: translateX(-50%); /* Pomeranje unazad za 50% širine elementa */
-    width: 70px; /* Širina linije */
-    height: 4px; /* Visina linije */
-    background-color: #e0e0e0; /* Promena boje linije u narandžastu */
-    border-radius: 2px; /* Zaobljeni krajevi linije */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
 }
 
 .btn_7 {
-    background-color: #f0f0f0; /* Pozadinska boja dugmeta */
-    color: black; /* Boja teksta */
-    border: 2px solid #ccc; /* Boja ivice */
-    padding: 10px 20px; /* Unutrašnje margine */
-    text-align: center; /* Centriranje teksta */
-    text-decoration: none; /* Bez podvlačenja teksta */
-    display: inline-block; /* Inline-block za margine */
-    font-size: 16px; /* Veličina fonta */
-    margin: 4px 2px; /* Margine oko dugmeta */
-    cursor: pointer; /* Kursor ruke kada se prelazi preko dugmeta */
-    border-radius: 5px; /* Zaobljeni uglovi */
-    transition-duration: 0.4s; /* Vreme trajanja tranzicije */
+    background-color: #f0f0f0;
+    color: black;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.4s;
     margin-left: 60px;
     margin-top: 40px;
     width: 160px;
 }
 
 .btn_7:hover {
-    background-color: #ddd; /* Promena boje pozadine kada je kursor iznad */
-    border: 2px solid #aaa; /* Promena boje ivice kada je kursor iznad */
+    background-color: #ddd;
+    border: 2px solid #aaa;
 }
 
-/* Medijski upiti za responzivni dizajn */
-
-/* Tableti (ekrani sa širinom između 600px i 768px) */
 @media (max-width: 768px) {
     .single_special_cource {
         margin-bottom: 20px;
-        margin-right:90px;
+        margin-right: 90px;
     }
 
     .aktivne-teme-title {
-        font-size: 48px; /* Smanjena veličina fonta za tablete */
+        font-size: 48px;
     }
 
     .btn_7 {
         margin-left: 30px;
         margin-top: 20px;
-        width: 140px; /* Smanjena širina dugmeta za tablete */
+        width: 140px;
     }
 }
 
-/* Telefoni (ekrani sa širinom ispod 600px) */
 @media (max-width: 900px) {
     .single_special_cource {
         margin-bottom: 15px;
     }
 
     .aktivne-teme-title {
-        font-size: 36px; /* Smanjena veličina fonta za telefone */
-        margin-right:60px;
+        font-size: 36px;
+        margin-right: 60px;
     }
 
     .btn_7 {
         margin-left: 20px;
         margin-top: 10px;
-        width: 120px; /* Smanjena širina dugmeta za telefone */
+        width: 120px;
     }
 }
 </style>
+
 
 
 <div class="section-2">
@@ -130,7 +127,8 @@
                         @csrf
                         <input type="text" id="userid" name="userid" hidden value="{{Session::get('loginId')}}"/>
                         <input type="text"  name="courseid" id="courseid" hidden value="{{$course->id}}" />
-                        
+                        <button type="submit" class="btn_7" style="color:black">Prijavi se</button>
+
                     </form>
                     <h4>{{$course->state}}</h4>
                     <a><h3 style="color:black">{{$course->course}}</a>
@@ -144,7 +142,6 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn_7" style="color:black">Prijavi se</button>
                 </div>
             </div>
         </div>
