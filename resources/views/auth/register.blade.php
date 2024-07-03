@@ -103,8 +103,8 @@
                             <label for="vaspitac">Vaspitac</label>
                             <input type="radio" id="roditelj" name="tip" value="roditelj">
                             <label for="roditelj">Roditelj</label>
-                            {{-- <input type="radio" id="admin" name="tip" value="admin">
-                            <label for="admin">Admin</label> --}}
+                             <input type="radio" id="admin" name="tip" value="admin">
+                            <label for="admin">Admin</label> 
                         </div>
                         <p hidden id="roleError" class="text-danger"> Morate izabrati ulogu! </p>
 
