@@ -206,10 +206,10 @@
                     </div>
                     <div class="modal-body" >
                         <label>Tema:</label>
-                        <input type="text" class="form-control form-control-sm" style="height: 38px;" name="course" id="course" placeholder="Enter course name" required>
+                        <input type="text" class="form-control form-control-sm" style="height: 38px;" name="course" id="course" placeholder="Unesi ime teme" required>
                         <br>
                         <label>Detalji teme:</label>
-                        <input type="text" class="form-control form-control-sm" style="height: 38px;" name="infomation" id="infomation" placeholder="Enter detail text" required/>
+                        <input type="text" class="form-control form-control-sm" style="height: 38px;" name="infomation" id="infomation" placeholder="Unesi detalje teme" required/>
                         <label class="mt-1" for="picturenews">Slika teme: </label>
                         <input type="file" class="form-control form-control-sm"  style="height: 38px;"  name="image" id="image" />
                         <br>
