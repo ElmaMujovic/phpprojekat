@@ -10,23 +10,25 @@
             font-weight: bold;
             text-decoration: none;
         }
+
+        /* Stil za vertikalne divove */
         .vertikalni-div {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 30px; 
+            margin-top: 30px; /* Povećan razmak između vertikalnih divova */
             background-color: #c3f2fc;
             color: white;
-            padding: 40px; 
+            padding: 40px; /* Povećan padding */
             border-radius: 30px;
-            width: 450px; 
-            margin-right: 30px;
-            position: relative; 
+            width: 450px; /* Povećana širina vertikalnih divova */
+            margin-right: 30px; /* Dodatni razmak između divova */
+            position: relative; /* Dodata pozicija relativna za oblik na dnu */
             margin-bottom:10px;
         }
         .slika-vertikalni-div {
             width: 127%;
-            height: 300px;
+            height: 300px; /* Automatska visina kako bi se očuvali proporcije */
             border-radius: 30px;
             margin-top: -40px;
             mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 90"><path fill-rule="evenodd" d="M0,0 H388 V70 Q300,90 258,70 Q258,90 222,70 Q222,90 186,70 Q186,90 150,70 Q150,90 114,70 Q114,90 78,70 Q78,90 42,70 Q42,90 0,70 Z"></path></svg>');
@@ -95,7 +97,6 @@ h3{
             margin-top: 50px; 
             background-color: orange;
             margin-bottom:50px;
-
         }
 
         @media (max-width: 768px) {
